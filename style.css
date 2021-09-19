@@ -182,6 +182,7 @@ footer .secondPart p {
   header h3 {
     -webkit-transform: translate(3.5em, -3.1em);
             transform: translate(3.5em, -3.1em);
+    display: inline-block;
   }
   header .navBar {
     position: relative;
@@ -209,7 +210,6 @@ footer .secondPart p {
   }
   .caroussel__image {
     width: 100%;
-    border: 2px solid red;
   }
   .caroussel__image img {
     max-width: 100%;
@@ -226,8 +226,7 @@ footer .secondPart p {
     display: inline-flex;
     position: absolute;
     top: 83%;
-    left: 73.5%;
-    border: 2px solid #ac0;
+    left: 72.5%;
   }
   .caroussel__image--icon i {
     -webkit-transform: translate(0, 0);
@@ -235,18 +234,17 @@ footer .secondPart p {
   }
   .caroussel__text {
     width: 100%;
-    margin: 2em 0;
+    margin: 0.5em 0;
     -webkit-transform: translateY(-5em);
             transform: translateY(-5em);
-    border: 2px solid red;
   }
   .caroussel__text h2 {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   footer {
     display: block;
-    -webkit-transform: translateY(-7em);
-            transform: translateY(-7em);
+    -webkit-transform: translateY(-6em);
+            transform: translateY(-6em);
   }
   footer img {
     width: 100%;
