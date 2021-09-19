@@ -29,7 +29,7 @@ header{
         margin-left: 2em;
     }
 
-    .navbar{
+    .navBar{
         ul{
             display: flex;
             margin-left: 7em;
@@ -37,7 +37,7 @@ header{
             li{
                 font-family: 'Spartan', sans-serif;
                 list-style: none;
-                padding: 1em;
+                padding: 1em 1em 0.5em 1em;
                 font-size: 0.8em;
                 font-weight: 700;
                 color: rgba(255,255,255,0.8);
@@ -76,7 +76,7 @@ header{
 
         &--icon{
             display: flex;
-            position: fixed;
+            position: absolute;
             top: 84.5%;
             left: 110.95%;
     
@@ -94,7 +94,6 @@ header{
         }
 
     }
-
 
     &__text{
         display: flex;
@@ -162,143 +161,104 @@ footer{
     header{
         .menu{
             display: block;
-            
-            /*i{
-                width: 5em;
-                z-index: 1;
-            }*/
 
             .fa-bars, .fa-times{
                 font-size: 2em;
+                color: #fff;
                 position: relative;
                 top: 0em;
                 left: 0em;
-                z-index: 1;
+                z-index: 10;
+                cursor: pointer;
+            }
+
+            .fa-times{
+                transform: translateX(-0.9em);
+                display: none;
+                color: rgba(0,0,0,0.8);
+            }
+
+            .fa-bars{
+                padding-left: 0.3em;
             }
         }
 
-        .navbar{
+        h3{
+            transform: translate(3.5em, -3.1em);
+        }
+
+        .navBar{
             position: relative;
-            left: -300%;
-            background: #ac0;
-            z-index: 1;
             transform: translateY(-5em);
+            left: -150%;
+            z-index: 1;
+            background-color: white;
 
             ul{
-                display: block;
-                //margin-left: 7em;
+                margin-left: 2.5em;
     
-                /*li{
-                    font-family: 'Spartan', sans-serif;
-                    list-style: none;
-                    padding: 1em;
+                li{
                     font-size: 0.8em;
-                    font-weight: 700;
-                    color: rgba(255,255,255,0.8);
-                    z-index: 1;
-                    margin-top: 1.3em;
-                    margin-left: 1.2em;
-                    cursor: pointer;
+                    color: rgba(0,0,0,0.8);
+                    margin-left: 0.5em;
     
                     &:hover{
-                        border-bottom: 3px solid rgba(255,255,255,0.8);
+                        border-bottom: 0px solid rgba(255,255,255,0.8);
                     }
-                }*/
+                }
             }
         }
     }
 
     .caroussel{
         display: block;
-        transform: translateY(-12.5em);
+        transform: translateY(-1.0em);
     
         &__image{
             width: 100%;
-            //transform: translateY(-21em);
+            border: 2px solid red;
     
             img{
                 max-width: 100%;
-                height: auto;
-                //box-sizing: cover;
-               // display: none;
+                height: 375px;
+                box-sizing: cover;
             }
     
             .visible{
                 display: block;
             }
-    
+
             &--icon{
-               // display: inline-flex;
-                //position: fixed;
-                //transform: translateX(22em);
-                //top: 66.5%;
-                //left: 95%;
-               // margin: 0em;
-                //transform: translateY(-5em);
+                display: inline-flex;
+                position: absolute;
+                top: 83%;
+                left: 73.5%;
                 border: 2px solid #ac0;
         
                 i{
-                    background: rgba(0,0,0,0.9);
-                    color: rgba(255,255,255,0.9);
-                    width: 3em;
-                    height: 3em;
-                    text-align: center;
-                    padding: 1em 0;
-                    margin: 1em 0;
-                    transform: translate(-5em,1em);
-                    cursor: pointer;
-                    border: 2px solid #fa0;
-                    //display: inline-flex;
+                    transform: translate(0,0);
                 }
             }
+               
     
         }
     
-    
         &__text{
-           // display: flex;
             width: 100%;
             margin: 2em 0;
             transform: translateY(-5em);
-            //-family: 'Spartan', sans-serif;
+            border: 2px solid red;
     
-           //&--one, &--two, &--three{
-                //max-width: 100%;
-                //margin: 2em 0;
-                //display: none;
-    
-                /*h2{
-                    font-weight: 700;
-                    font-size: 2em;
-                    padding: 1em 0;
-                }*/
-    
-               /* p{
-                    padding: 1em 0;
-                    color: rgba(0,0,0,0.5);
-                    font-size: 0.7em;
-                    font-weight: 700;
-                    color: rgba(0,0,0,0.5);
-                }*/
-    
-                /*h3{
-                    padding: 1em 0;
-                    letter-spacing: 5px;
-                }*/
-    
-            //}
-    
-            /*.see{
-                display: block;
-            }*/
+                h2{
+                    font-size: 1.1em;
+                }
     
         }
     }
 
     footer{
         display: block;
-        //transform: translateY(-6em);
-        //font-family: 'Spartan', sans-serif;
+        transform: translateY(-7em);
 
         img{
             width: 100%;
@@ -307,23 +267,16 @@ footer{
     
         .secondPart{
             margin: 2em;
-    
-            /*h4{
-                letter-spacing: 3px;
-                font-size: 0.8em;
-            }
-    
-                p{
-                    font-size: 0.8em;
-                    font-weight: 700;
-                    color: rgba(0,0,0,0.5);
-                }*/
         }
     }
 }
 
 // Style for Javascript
-.trans{
-    transform: translateX(-100%);
-    transition: 3s;
+.navBar.mouv{
+    position: relative;
+    //transform: translateY(-2em);
+    transition: 0.3s ease-in-out;
+    left: 0%;
+    background: #fff;
+    z-index: 1;
 }

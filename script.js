@@ -50,3 +50,27 @@ function suivant(){
     writer[count].classList.add('see');
     writer[count].style.transition = '10s ease-in-out';
 }
+
+// For the mobile version
+let bars = document.querySelector('.fa-bars')
+let navBar = document.querySelector('.navBar')
+let times = document.querySelector('.fa-times')
+let caroussel = document.querySelector('.caroussel')
+
+bars.addEventListener('click', menuMouv)
+
+function menuMouv(){
+    navBar.classList.add('mouv')
+    bars.style.display = "none";
+    caroussel.style.transform = 'translateY(1em)'
+    times.style.display = "inline";
+}
+
+times.addEventListener('click', deleteMenu)
+
+function deleteMenu(){
+    navBar.classList.remove('mouv')
+    bars.style.display = "inline";
+    times.style.display = "none";
+    caroussel.style.transform = 'translateY(-1em)';
+}
